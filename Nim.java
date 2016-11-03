@@ -1,10 +1,4 @@
-import java.util.Scanner;
 
-/*
- *  This program is a game, called Nim, which is made by Level 3 requirements.
- *  It can check all the data which is inputed
- */
-public class Nim {
 	
 	//This method outputs bag status
 	public static void arrOutput(int[] arr) {
@@ -54,16 +48,23 @@ public class Nim {
 					
 					numBag = s.nextLine();
 
-					if (!numCheck(numBag)) {
+					while (!numCheck(numBag)) {
 						
 						System.out.println("You should input integer. Try again: ");
 						numBag = s.nextLine();
 					}
 					
-					if (Integer.parseInt(numBag) > 3) {
+					while (Integer.parseInt(numBag) > 3) {
 						
 						System.out.println("You should input integer less than 3. Try again: ");
 						numBag = s.nextLine();
+					}
+					
+					while (bags[Integer.parseInt(numBag)-1]==0){
+						
+						System.out.println("This bag is empty. Choose another one: ");
+						numBag = s.nextLine();
+						
 					}
 
 				} while (!numCheck(numBag));
@@ -72,13 +73,13 @@ public class Nim {
 				do {
 					numToken = s.nextLine();
 					
-					if (!numCheck(numToken)) {
+					while (!numCheck(numToken)) {
 						
 						System.out.println("You should input integer. Try again: ");
 						numToken = s.nextLine();
 					}
 					
-					if (Integer.parseInt(numToken) > bags[Integer.parseInt(numBag) - 1]) {
+					while (Integer.parseInt(numToken) > bags[Integer.parseInt(numBag) - 1]) {
 						
 						System.out.println("You should input integer less than " + bags[Integer.parseInt(numBag) - 1]
 								+ ". Try again: ");
@@ -112,16 +113,23 @@ public class Nim {
 					
 					numBag = s.nextLine();
 					
-					if (!numCheck(numBag)) {
+					while (!numCheck(numBag)) {
 						
 						System.out.println("You should input integer. Try again: ");
 						numToken = s.nextLine();
 					}
 					
-					if (Integer.parseInt(numBag) > 3) {
+					while (Integer.parseInt(numBag) > 3) {
 						
 						System.out.println("You should input integer less than 3. Try again: ");
 						numBag = s.nextLine();
+					}
+					
+                    while (bags[Integer.parseInt(numBag)-1]==0){
+						
+						System.out.println("This bag is empty. Choose another one: ");
+						numBag = s.nextLine();
+						
 					}
 
 				} while (!numCheck(numBag));
@@ -132,14 +140,14 @@ public class Nim {
 					
 					numToken = s.nextLine();
 					
-					if (!numCheck(numToken)) {
+					while (!numCheck(numToken)) {
 						
 						System.out.println("You should input integer. Try again: ");
 						
 						numToken = s.nextLine();
 					}
 					
-					if (Integer.parseInt(numToken) > bags[Integer.parseInt(numBag) - 1]) {
+					while (Integer.parseInt(numToken) > bags[Integer.parseInt(numBag) - 1]) {
 						
 						System.out.println("You should input integer less than " + bags[Integer.parseInt(numBag) - 1]
 								+ ". Try again: ");
@@ -177,4 +185,3 @@ public class Nim {
 			System.out.println("Game Over - Player 1 wins");//Congratz to player one!!
 		}
 	}
-}
