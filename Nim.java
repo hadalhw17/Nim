@@ -1,4 +1,11 @@
+import java.util.Scanner;
 
+/*
+ * Student 
+ *  This program is a game, called Nim, which is made by Level 3 requirements.
+ *  It can check all the data which is inputed
+ */
+public class Nim {
 	
 	//This method outputs bag status
 	public static void arrOutput(int[] arr) {
@@ -185,3 +192,4 @@
 			System.out.println("Game Over - Player 1 wins");//Congratz to player one!!
 		}
 	}
+}
