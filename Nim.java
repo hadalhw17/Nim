@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /*
- * Student 
+ * Student id 689997
  *  This program is a game, called Nim, which is made by Level 3 requirements.
  *  It can check all the data which is inputed
  */
