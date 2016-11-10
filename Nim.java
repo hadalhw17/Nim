@@ -6,13 +6,13 @@ import java.util.Scanner;
  */
 public class Nim {
 
-	static String NEXT = "Next";
-	static String ERROR_INT = "You should input an integer. Try again: ";
-	static String ERROR_AMOUNT = "Invalid number of bags/tokens. Try again: ";
-	static String ERROR_EMPTY = "This bag is empty. Choose another one: ";
+	private final static String NEXT = "Next";
+	private final static String ERROR_INT = "You should input an integer. Try again: ";
+	private final static String ERROR_AMOUNT = "Invalid number of bags/tokens. Try again: ";
+	private final static String ERROR_EMPTY = "This bag is empty. Choose another one: ";
 	private final static String ONEBAG = "Player 1 - choose bag: ";
 	private final static String TWOBAG = "Player 2 - choose bag: ";
-	public static Scanner s = new Scanner(System.in);
+	private final static Scanner s = new Scanner(System.in);
 
 	// This method outputs bag status
 	public static void arrOutput(int[] arr) {
